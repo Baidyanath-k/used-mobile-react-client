@@ -1,0 +1,60 @@
+[
+    {
+        "_id": "1",
+        "title": "Samsung Galaxy S9 Plus 6/64GB",
+        "img": "https://www.sahivalue.com/product-images/WhatsApp+Image+2022-07-07+at+3.30.33+PM+%283%29.jpeg/293890000014099987/400x400",
+        "orginal_price": "20000",
+        "resale_price": "2000",
+        "Color": "Black",
+        "facility": "7 days warrenty",
+        "years_of_use": "3",
+        "posted_time": "4:30",
+        "seller_name": "Ahmed",
+        "location": "Dhaka",
+        "condition_type": "good",
+        "descreption": "This product is good. This product use 3 yeras but product condtion is good."
+    },
+    {
+        "_id": "2",
+        "title": "Samsung Galaxy S10e 6/128GB",
+        "img": "https://www.sahivalue.com/product-images/Attachments_20224709044752.jpg/293890000015156346/600x600",
+        "orginal_price": "18000",
+        "resale_price": "8000",
+        "Color": "Black",
+        "facility": "10 days warrenty",
+        "years_of_use": "2",
+        "posted_time": "5:30",
+        "seller_name": "Ali",
+        "location": "Naogaon",
+        "condition_type": "excellent",
+        "descreption": "Exchanges welcome. 100% Original. 99% of products never opened or repaired.All products on website available for sale at Mumbai store."
+    },
+    {
+        "_id": "3",
+        "title": "Samsung Galaxy Note 5 4/32GB",
+        "img": "https://www.sahivalue.com/product-images/2022-08-24+07%3A33%3A06+%2B0000.jpg/293890000015687049/600x600",
+        "orginal_price": "22000",
+        "resale_price": "8500",
+        "Color": "Black",
+        "facility": "7 days warrenty",
+        "years_of_use": "3.5",
+        "posted_time": "10:30",
+        "seller_name": "Asif",
+        "condition_type": "excellent",
+        "descreption": "Book for tk 500 & Pay rest Cash on Delivery.  To Book, click here- Credit Card, Debit Card, Loan Financing all available. Click here for details- Bkash, Rocket | Card | Wallet | Net Banking & More options."
+    },
+    {
+        "_id": "4",
+        "title": "Samsung Galaxy S10 8/128GB",
+        "img": "https://www.sahivalue.com/product-images/Attachments_20223417123426.jpg/293890000015439200/600x600",
+        "orginal_price": "30000",
+        "resale_price": "1000",
+        "Color": "White",
+        "facility": "7 days warrenty",
+        "years_of_use": "3.5",
+        "posted_time": "8:30",
+        "seller_name": "Hasan",
+        "condition_type": "excellent",
+        "descreption": "15.49 cm (6.1 inch) Quad HD+ Display| - 16MP + 12MP | 10MP Front Camera | - 3400 mAh Lithium-ion Battery | - Exynos 9 9820 Processor"
+    }
+]
