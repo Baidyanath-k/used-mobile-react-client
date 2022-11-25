@@ -9,7 +9,7 @@ const NavBar = () => {
         </li>
 
         <li>
-            <Link>About</Link>
+            <Link to='/blogs'>Blogs</Link>
         </li>
         <li>
             <Link>Appoinment</Link>
@@ -69,8 +69,6 @@ const NavBar = () => {
                     {menuItems}
                 </ul>
             </div>
-
-            
         </div>
     );
 };
