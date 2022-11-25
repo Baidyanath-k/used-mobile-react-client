@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Product = ({ product }) => {
-    
-    const { _id, title, img, orginal_price, resale_price } = product
+const WaltonProduct = ({ waltonProduct }) => {
+    const { _id, title, img, orginal_price, resale_price } = waltonProduct
     return (
         <div className="card card-compact w-72 bg-base-100 shadow-xl border-solid">
             <figure><img src={img} className='h-80 w-full' alt="Sumsung" /></figure>
@@ -14,11 +13,11 @@ const Product = ({ product }) => {
                     <p className='text-lg font-bold'>Sale Price:{resale_price} TK</p>
                 </div>
                 <div className="card-actions justify-end">
-                    <Link to={`/product/${_id}`}><button className="btn">Details</button></Link>
+                    <Link to={`/waltonProduct/${_id}`}><button className="btn">Details</button></Link>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Product;
+export default WaltonProduct;
