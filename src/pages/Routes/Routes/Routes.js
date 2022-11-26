@@ -12,6 +12,7 @@ import MainLayot from "../../Layout/MainLayot";
 import Login from "../../Login/Login";
 import Register from "../../Register/Register";
 import notFound from '../../../assets/not-found/404.png'
+import PrivateRoutes from "../PrivateRoutes";
 
 const router = createBrowserRouter([
     {
@@ -36,17 +37,17 @@ const router = createBrowserRouter([
             },
             {
                 path: '/product/:id',
-                element: <ProductsDetails></ProductsDetails>,
+                element: <PrivateRoutes><ProductsDetails></ProductsDetails></PrivateRoutes>,
                 loader: ({ params }) => fetch(`http://localhost:5000/samsungcollection/${params.id}`)
             },
             {
                 path: '/symphonyProduct/:id',
-                element: <SymphonyDetails></SymphonyDetails>,
+                element: <PrivateRoutes><SymphonyDetails></SymphonyDetails></PrivateRoutes>,
                 loader: ({ params }) => fetch(`http://localhost:5000/symphonycollection/${params.id}`)
             },
             {
                 path: '/waltonProduct/:id',
-                element: <WaltonProDetails></WaltonProDetails>,
+                element: <PrivateRoutes><WaltonProDetails></WaltonProDetails></PrivateRoutes>,
                 loader: ({ params }) => fetch(`http://localhost:5000/waltoncollection/${params.id}`)
             },
 
@@ -55,7 +56,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/category',
-        element: <CategoryLayout></CategoryLayout>,
+        element: <PrivateRoutes><CategoryLayout></CategoryLayout></PrivateRoutes>,
         children: [
             {
                 path: '/category',
