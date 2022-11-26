@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Blogs from "../../Blogs/Blogs";
+import Category from "../../category/Category/Category";
 import Home from "../../Home/Home/Home";
 import ProductsDetails from "../../Home/ProductDetails/ProductsDetails";
 import SymphonyDetails from "../../Home/SymphonyDetails/SymphonyDetails";
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
                 element: <WaltonProDetails></WaltonProDetails>,
                 loader: ({ params }) => fetch(`http://localhost:5000/waltoncollection/${params.id}`)
             },
+            {
+                path: '/category',
+                element: <Category></Category>
+            }
 
         ]
     }

@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import Products from '../Products/Products';
 import SymphonyProduct from '../SymphonyProduct/SymphonyProduct';
 import WaltonProducts from '../WaltonProducts/WaltonProducts';
+import Wellcome from '../Wellcome/Wellcome';
 
 
 
@@ -14,6 +15,7 @@ const Home = () => {
             <Products></Products>
             <SymphonyProduct></SymphonyProduct>
             <WaltonProducts></WaltonProducts>
+            <Wellcome></Wellcome>
         </div>
     );
 };

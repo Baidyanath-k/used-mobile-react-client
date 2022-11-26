@@ -11,7 +11,7 @@ const WaltonProducts = () => {
             })
     }, [])
     return (
-        <div className="products-category grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
+        <div className="products-category grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 my-8">
             {
                 waltonProducts.map(waltonProduct =>
                     <WaltonProduct

@@ -25,7 +25,7 @@ const WaltonProDetails = () => {
 
                 <p className='text-center'>{descreption}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <button className="btn">Buy Now</button>
                 </div>
             </div>
         </div>
