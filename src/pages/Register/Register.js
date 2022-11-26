@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../context/AuthProvider';
+import { FaGoogle } from "react-icons/fa";
 
 
 const Register = () => {
@@ -108,12 +109,12 @@ const Register = () => {
 
                 <input type="submit" className='btn w-full mt-8' value="Sign Up" />
 
-                <h2 className='font-bold'>Already Join Doctors Portal?<Link className='text-primary' to="/login"> Log In</Link></h2>
+                <h2 className='font-bold'>Already Join Used Mobile?<Link className='text-primary' to="/login"> Log In</Link></h2>
 
             </form>
             <div className="google px-10">
                 <h2 className='text-2xl font-bold text-center'>or</h2>
-                <button className='btn w-full my-5' onClick={googleHandle}>Continue With Google</button>
+                <button className='btn w-full my-5' onClick={googleHandle}> <FaGoogle className='mr-5'></FaGoogle> Continue With Google</button>
             </div>
         </div>
     );

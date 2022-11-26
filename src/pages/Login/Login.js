@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
     const { logIn, googleSignup } = useContext(AuthContext);//use authContext
@@ -99,11 +100,11 @@ const Login = () => {
                 }
 
                 <input type="submit" value="Login" className='w-full py-3 btn mt-5' />
-                <span className='font-bold text-sm mt-2 block'>New to Doctors Portal <Link to="/register" className='text-primary'>Create New Account</Link> </span>
+                <span className='font-bold text-sm mt-2 block'>New to Used Mobile <Link to="/register" className='text-primary'>Create New Account</Link> </span>
             </form>
             <div className="google_button px-10">
                 <h2 className='font-bold text-xl text-center mb-8'>OR</h2>
-                <button className='w-full btn mb-10' onClick={googleHandle}>Continue With Google</button>
+                <button className='w-full btn mb-10' onClick={googleHandle}> <FaGoogle className='mr-5'></FaGoogle> Continue With Google</button>
             </div>
         </div>
     );
