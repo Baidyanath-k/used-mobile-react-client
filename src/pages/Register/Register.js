@@ -7,7 +7,7 @@ import { AuthContext } from '../../context/AuthProvider';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const { createUser, updateUser } = useContext(AuthContext);
+    const { createUser, updateUser, googleSignup } = useContext(AuthContext);
     const [error, setError] = useState(false);
     const [success, setSuccess] = useState(false);
     const navigate = useNavigate()
@@ -39,6 +39,20 @@ const Register = () => {
                 setError(error.message);
                 setSuccess(false);
             })
+    }
+    const googleHandle = () => {
+        googleSignup()
+            .then(result => {
+                const user = result.user;
+                setSuccess(true)
+                toast('User created successfully.');
+                navigate('/');
+                console.log(user);
+            })
+            .then(error => {
+                console.error(error)
+            })
+
     }
     return (
         <div className='w-96 m-auto my-8 shadow-2xl'>
@@ -99,7 +113,7 @@ const Register = () => {
             </form>
             <div className="google px-10">
                 <h2 className='text-2xl font-bold text-center'>or</h2>
-                <button className='btn w-full my-5'>Continue With Google</button>
+                <button className='btn w-full my-5' onClick={googleHandle}>Continue With Google</button>
             </div>
         </div>
     );
