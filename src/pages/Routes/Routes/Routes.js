@@ -11,6 +11,7 @@ import CategoryLayout from "../../Layout/CategoryLayout";
 import MainLayot from "../../Layout/MainLayot";
 import Login from "../../Login/Login";
 import Register from "../../Register/Register";
+import notFound from '../../../assets/not-found/404.png'
 
 const router = createBrowserRouter([
     {
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
                 element: <WaltonCategory></WaltonCategory>,
             },
         ]
+    },
+    {
+        path: '*',
+        element: <> <img className="w-full" src={notFound} alt="not found" /> </>
     }
 ])
 export default router
