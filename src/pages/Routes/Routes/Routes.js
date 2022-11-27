@@ -13,6 +13,8 @@ import Login from "../../Login/Login";
 import Register from "../../Register/Register";
 import notFound from '../../../assets/not-found/404.png'
 import PrivateRoutes from "../PrivateRoutes";
+import DashboardLayout from "../../Layout/DashboardLayout";
+import Dashboard from "../../dashboard/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -70,6 +72,17 @@ const router = createBrowserRouter([
                 path: '/category/waltoncategory',
                 element: <WaltonCategory></WaltonCategory>,
             },
+        ]
+    },
+    {
+        path: '/users',
+        element: <PrivateRoutes><DashboardLayout></DashboardLayout></PrivateRoutes>,
+        children: [
+            {
+                path: '/users',
+                element: <Dashboard></Dashboard>,
+            },
+
         ]
     },
     {

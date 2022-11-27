@@ -32,7 +32,7 @@ const NavBar = () => {
             user?.uid ?
                 <>
                     <li>
-                        <Link>Dashboard</Link>
+                        <Link to='/users'>Dashboard</Link>
                     </li>
                     <li>
                         <button onClick={handleLogout}>SignOut</button>

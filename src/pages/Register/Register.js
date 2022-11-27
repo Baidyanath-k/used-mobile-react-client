@@ -15,6 +15,7 @@ const Register = () => {
 
 
     const handleRegister = data => {
+
         createUser(data.email, data.password)
             .then(result => {
                 const user = result.user;
@@ -29,8 +30,8 @@ const Register = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
+                        userInformationSaveDatabase(data.name, data.email);
                         navigate('/')
-
                     })
                     .catch(error => console.log(error))
 
@@ -54,6 +55,22 @@ const Register = () => {
                 console.error(error)
             })
 
+    }
+
+    const userInformationSaveDatabase = (name, email) => {
+        const user = { name, email };
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                // setCreatedUserEmail(email)//jwt
+                console.log(data)
+            })
     }
     return (
         <div className='w-96 m-auto my-8 shadow-2xl'>
