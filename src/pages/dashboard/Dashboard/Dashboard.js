@@ -1,11 +1,5 @@
-import {
-    useQuery,
-    useMutation,
-    useQueryClient,
-    QueryClient,
-    QueryClientProvider,
-} from '@tanstack/react-query'
-import React, { useState } from 'react';
+import { useQuery, } from '@tanstack/react-query'
+
 import { toast } from 'react-toastify';
 
 const Dashboard = () => {
@@ -17,10 +11,8 @@ const Dashboard = () => {
             return data;
         }
     });
-    // const [users,setUsers]=useState([]);
-    // fetch('http://localhost:5000/users')
-    // .then(res=>res.json())
-    // .then(data=> setUsers(data))
+
+
 
 
     const adminHandler = id => {

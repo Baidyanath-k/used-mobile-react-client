@@ -15,6 +15,8 @@ import notFound from '../../../assets/not-found/404.png'
 import PrivateRoutes from "../PrivateRoutes";
 import DashboardLayout from "../../Layout/DashboardLayout";
 import Dashboard from "../../dashboard/Dashboard/Dashboard";
+import AdminRoutes from "./AdminRoutes";
+import AllProducts from "../../dashboard/AllProduct/AllProducts";
 
 const router = createBrowserRouter([
     {
@@ -79,8 +81,12 @@ const router = createBrowserRouter([
         element: <PrivateRoutes><DashboardLayout></DashboardLayout></PrivateRoutes>,
         children: [
             {
-                path: '/users',
-                element: <Dashboard></Dashboard>,
+                path: '/users/users',
+                element: <AdminRoutes><Dashboard></Dashboard></AdminRoutes>,
+            },
+            {
+                path: '/users/products',
+                element: <AllProducts></AllProducts>,
             },
 
         ]
