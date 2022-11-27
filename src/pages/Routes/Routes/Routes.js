@@ -42,17 +42,17 @@ const router = createBrowserRouter([
             {
                 path: '/product/:id',
                 element: <PrivateRoutes><ProductsDetails></ProductsDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/samsungcollection/${params.id}`)
+                loader: ({ params }) => fetch(`https://ass-12-server.vercel.app/samsungcollection/${params.id}`)
             },
             {
                 path: '/symphonyProduct/:id',
                 element: <PrivateRoutes><SymphonyDetails></SymphonyDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/symphonycollection/${params.id}`)
+                loader: ({ params }) => fetch(`https://ass-12-server.vercel.app/symphonycollection/${params.id}`)
             },
             {
                 path: '/waltonProduct/:id',
                 element: <PrivateRoutes><WaltonProDetails></WaltonProDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/waltoncollection/${params.id}`)
+                loader: ({ params }) => fetch(`https://ass-12-server.vercel.app/waltoncollection/${params.id}`)
             },
 
 

@@ -4,7 +4,7 @@ import WaltonProduct from '../WaltonProduct/WaltonProduct';
 const WaltonProducts = () => {
     const [waltonProducts, setwaltonProducts] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/waltoncollection`)
+        fetch(`https://ass-12-server.vercel.app/waltoncollection`)
             .then(res => res.json())
             .then(data => {
                 setwaltonProducts(data)

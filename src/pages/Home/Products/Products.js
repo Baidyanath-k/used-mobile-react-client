@@ -4,7 +4,7 @@ import Product from '../Product/Product';
 const Products = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/samsungcollection`)
+        fetch(`https://ass-12-server.vercel.app/samsungcollection`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data)

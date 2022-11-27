@@ -77,3 +77,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 *use Tailwind CSS
 *use dasyUI framework
 *use react router
+
+adminEmail: <bd@gmail.com>
+
+adminPassword: <123456a>

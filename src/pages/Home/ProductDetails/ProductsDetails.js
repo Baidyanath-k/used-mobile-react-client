@@ -29,7 +29,7 @@ const ProductsDetails = () => {
 
 
 
-        fetch('http://localhost:5000/buys', {
+        fetch('https://ass-12-server.vercel.app/buys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

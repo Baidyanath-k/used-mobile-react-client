@@ -4,7 +4,7 @@ import SymProduct from '../SymProduct/SymProduct';
 const SymphonyProduct = () => {
     const [symphonyProducts, setsymphonyProducts] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/symphonycollection`)
+        fetch(`https://ass-12-server.vercel.app/symphonycollection`)
             .then(res => res.json())
             .then(data => {
                 setsymphonyProducts(data)
