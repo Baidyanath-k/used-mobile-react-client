@@ -1,47 +1,84 @@
-import React from 'react';
-import b1 from '../../../assets/banner-img/banner1.jpg';
-import b2 from '../../../assets/banner-img/banner2.jpg';
-import b3 from '../../../assets/banner-img/banner3.jpg';
-import b4 from '../../../assets/banner-img/banner4.jpg';
-import BannerItem from '../BannerItem/BannerItem';
+import React from "react";
+import Slider from "react-slick";
 
 const Banner = () => {
-    const bannerData = [
-        {
-            image: b1,
-            prev: 4,
-            id: 1,
-            next: 2
+  const settings = {
+    dots: true,
+    fade: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
         },
-        {
-            image: b2,
-            prev: 1,
-            id: 2,
-            next: 3
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 2,
         },
-        {
-            image: b3,
-            prev: 2,
-            id: 3,
-            next: 4
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
-        {
-            image: b4,
-            prev: 3,
-            id: 4,
-            next: 1
-        },
-    ];
-    return (
-        <div className="carousel w-full max-h-96">
-            {
-                bannerData.map(data => <BannerItem
-                    key={data.id}
-                    data={data}
-                ></BannerItem>)
-            }
+      },
+    ],
+  };
+  return (
+    <div>
+      <Slider {...settings}>
+        <div className="">
+          <img
+            className="object-fill rounded-md h-80 w-full"
+            src="https://i.ibb.co/kXR9Nkj/banner1.jpg"
+            alt=""
+          />
         </div>
-    );
+        <div>
+          <img
+            className="object-fill rounded-md h-80 w-full"
+            src="https://i.ibb.co/zsgMR2d/banner2.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            className="object-fill rounded-md h-80 w-full"
+            src="https://i.ibb.co/z7sXJ8Z/banner3.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            className="object-fill rounded-md h-80 w-full"
+            src="https://i.ibb.co/kMb2705/banner4.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            className="object-fill rounded-md h-80 w-full"
+            src="https://i.ibb.co/m0128HW/banner5.jpg"
+            alt=""
+          />
+        </div>
+      </Slider>
+    </div>
+  );
 };
 
 export default Banner;
